@@ -30,7 +30,7 @@ nav
     justify-content: space-between;
     flex-wrap: wrap;
 }
-nav .logo 
+nav h2 a 
 {
     color: #00ffff;
     font-family: cursive;
