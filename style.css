@@ -30,9 +30,15 @@ nav
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo
+nav .logo 
 {
-    width: 140px;
+    color: #00ffff;
+    font-family: cursive;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    font-size: 35px;
+    text-decoration: none;
 }
 nav ul li
 {
