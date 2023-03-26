@@ -15,7 +15,7 @@
        <div id="header">
             <div class="container">
                 <nav>
-                  <img src="images/logo.png">
+                  <h2><a href="https://malipragnesh.github.io/My-Portfolio/" class="logo">portfolio.</a></h2>
                    <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -172,71 +172,64 @@
         <p>  Thank You For Visit <i class="fa-solid fa-heart"></i> My Portfolio. </i></p>
     </div>
  </div>
-      
-      
-<script>
+    
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-content");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
 
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-content");
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link")
-                }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab")
-                }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab")
+}
 
-            }
+var sidemenu = document.getElementById("sidemenu");
 
-       </script>
+function Openmenu(){
+    sidemenu.style.right = "0";
+}
+function Closemenu(){
+    sidemenu.style.right = "-200px";
+}
 
-       <script>
-        var sidemenu = document.getElementById("sidemenu");
-
-        function Openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function Closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-       </script>
-
-<script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxkNO-rB6gdmN7Eqcecz1IwGr7HvY7xGWMtGVqaFHWFCz_5aExpoc7TWrn2BYRa6-0/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        },5000)
-        form.reset()
-
-    })
-    .catch(error => console.error('Error!', error.message))
-})
-
-ScrollReveal({
-    reset: false,
-   distance: '30px',
-   duration: 2500,
-   delay: 400
- });
-
- ScrollReveal().reveal('.header-text',{delay: 200, origin: 'left'});
- ScrollReveal().reveal('.about-col-1',{delay: 200, origin: 'left'});
- ScrollReveal().reveal('.about-col-2',{delay: 200, origin: 'right'});
- ScrollReveal().reveal('.tab-titles',{delay: 300, origin: 'top'});
- ScrollReveal().reveal('.services-list div',{delay: 200, origin: 'top',interval: 300});
- ScrollReveal().reveal('.work-list',{delay: 200, origin: 'bottom',interval: 300});
- ScrollReveal().reveal('.social-icon  i',{delay: 200, origin: 'top',interval: 300});
-</script>
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function(){
+              msg.innerHTML = ""
+          },5000)
+          form.reset()
+  
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+  
+  ScrollReveal({
+      reset: false,
+     distance: '20px',
+     duration: 2500,
+     delay: 400
+   });
+  
+   ScrollReveal().reveal('.header-text',{delay: 200, origin: 'left'});
+   ScrollReveal().reveal('.about-col-1',{delay: 200, origin: 'left'});
+   ScrollReveal().reveal('.about-col-2',{delay: 300, origin: 'right'});
+   ScrollReveal().reveal('.tab-titles',{delay: 1000, origin: 'top',});
+   ScrollReveal().reveal('.services-list div',{delay: 200, origin: 'top',interval: 300});
+   ScrollReveal().reveal('.work-list',{delay: 200, origin: 'bottom',interval: 300});
+   ScrollReveal().reveal('.social-icon  i',{delay: 200, origin: 'top',interval: 300});
+ </script>
 
     </body>
 </html>
