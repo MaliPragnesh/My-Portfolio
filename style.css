@@ -368,6 +368,7 @@ form input, form textarea
     color: #ffffff;
     font-size: 18px;
     border-radius: 6px;
+    resize: none;
 }
 .btn
 {
